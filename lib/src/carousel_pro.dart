@@ -35,13 +35,13 @@ class Carousel extends StatefulWidget {
   final double dotSpacing;
 
   // The Color of each dot. Default is Colors.white
-  final Color? dotColor;
+  final Color dotColor;
 
   // The background Color of the dots. Default is [Colors.grey[800].withOpacity(0.5)]
   final Color? dotBgColor;
 
   // The Color of each increased dot. Default is Colors.white
-  final Color? dotIncreasedColor;
+  final Color dotIncreasedColor;
 
   // Enable or Disable the indicator (dots). Default is true
   final bool showIndicator;
@@ -208,7 +208,7 @@ class CarouselState extends State<Carousel> {
                 return ClipRRect(
                   borderRadius: widget.borderRadius
                       ? BorderRadius.all(widget.radius)
-                      : null,
+                      : BorderRadius.zero,
                   child: Container(
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
